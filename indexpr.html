@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Panificadora Richelly | Início </title>
+  <link rel="stylesheet" href="stylepr.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="indexpr.html"><span class="brand-mark">🥖</span><span> Panificadora Richelly </span></a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a class="active" href="indexpr.html"> Início </a>
+      <a class="" href="lanchespr.html"> Lanches </a>
+      <a href="indexpr.html#sobre"> Sobre Nós </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container hero">
+    <div class="hero-copy">
+      <span class="eyebrow"> Pão quentinho e recheio caprichado </span>
+      <h1> Panificadora <br> Richelly! 🥖 </h1>
+      <p> O verdadeiro pão francês crocante por fora e macio por dentro, preparado na hora com os melhores ingredientes. Peça o seu agora e prove esta delícia! </p>
+      <a class="btn" href="lanchespr.html"> 🥖 Conheça nosso cardápio →</a>
+    </div>
+    <div class="hero-image">
+      <img src="./imgspr/logomarca.jpeg" alt=" Logomarca Panificadora Richelly ">
+    </div>
+  </section>
+
+  <section class="container section" id="sobre">
+    <h2 class="section-title">🥖 Por que escolher a Richelly? </h2>
+    <div class="benefits">
+      <article class="benefit"><div class="benefit-icon">🔥</div><h3> Sempre quentinho </h3><p> Pães assados toda hora e lanches montados na chapa </p></article>
+      <article class="benefit"><div class="benefit-icon">🧀</div><h3> Muito Recheio </h3><p> Porções generosas com queijo derretido delicioso. </p></article>
+      <article class="benefit"><div class="benefit-icon">🥬</div><h3> Ingredientes frescos </h3><p> Temperos selecionados e maionese artesanal da casa. </p></article>
+      <article class="benefit"><div class="benefit-icon">🛵</div><h3> Entrega rápida</h3><p> Seu pedido chega crocante e saboroso na sua casa.</p></article>
+    </div>
+  </section>
+
+  <section class="container section">
+    <h2 class="section-title"> Os favoritos dos nossos clientes! </h2>
+    <div class="dog-grid" id="lanche-list"></div>
+    <p style="text-align:center"><a class="btn" href="lanchespr.html">Ver cardápio completo </a></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">🥖 Panificadora Richelly — O melhor pão quentinho e lanche da cidade. </div>
+</footer>
+
+<script src="./scriptpr.js"></script>
+<script defer>
+  const lanche_list = document.getElementById("lanche-list");
+  lanche_list.innerHTML = "";
+  window.addEventListener("load", function(e){
+    for(let i = 0; i < 3; i++){
+      let item = lista[i];
+      lanche_list.append(item.card());
+    }
+  });
+</script>
+</body>
+</html>

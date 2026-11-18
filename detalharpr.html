@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Panificadora Richelly | Detalhes do Lanche </title>
+  <link rel="stylesheet" href="stylepr.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="indexpr.html"><span class="brand-mark"> 🥖 </span> <span> Panificadora Richelly </span></a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a class="" href="indexpr.html">Início</a>
+      <a class="active" href="lanchespr.html"> Lanches </a>
+      <a href="indexpr.html#sobre"> Sobre Nós </a>
+    </nav>
+  </div>
+</header>
+
+<main class="container section">
+  <section class="detail-layout" id="lanche-details">
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container"> 🥖 Panificadora Richelly — O melhor pão quentinho e lanche da cidade. </div>
+</footer>
+<script src="./scriptpr.js"></script>
+<script>
+  window.addEventListener("load", function(e){
+    const lanche_details = document.getElementById("lanche-details");
+    let parametros = window.location.search;
+    let pos = parametros.indexOf("=");
+    let id = parametros.substring(pos+1);
+    let item = lista.find(item => item.id == id);
+
+    if (item){
+        lanche_details.innerHTML = item.detalhe();
+        document.title = ` Panificadora Richelly | ${item.nome}`;
+    }
+  })
+</script>
+</body>
+</html>
